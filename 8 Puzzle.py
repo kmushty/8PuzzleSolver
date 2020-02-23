@@ -209,11 +209,11 @@ def SearchAlgo():
             return temp_nodes, relative_nodes, checked_nodes 
 
         for move in MoveTile:
-            explorer_temp_node, param = action_move(move, temp_nodes.node_index_i)
+            explorer_temp_node, param = ActionMove(move, temp_nodes.node_index_i) #performing the swapping of tiles using defined move parameters
 
             if (explorer_temp_node != None) and (explorer_temp_node.tolist() != temp_nodes.child_node.tolist()):
                 node_count += 1
-                child_node = NodeInfo(param, node_count, np.array(explorer_temp_node), temp_nodes)
+                child_node = EightPuzzle(param, node_count, np.array(explorer_temp_node), temp_nodes)
                 relative_nodes.append(child_node)
 
                 if not (child_node.node_index_i.tolist() in checked_nodes): #check if node has been achieved priously
@@ -240,40 +240,6 @@ def main():
         PrintNodes(path(p))
         NodeWrite(r)
         NodeCompleted(q)
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
 
 
 
