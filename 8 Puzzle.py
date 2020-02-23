@@ -228,7 +228,7 @@ def main():
     m = numbers()
     SolvabilityCondition(m)
 
-    x = Node(0, m, None, None, 0)
+    x = EightPuzzle(0, m, None, None, 0)
     
     p, q, r = exploring_nodes(x)
 
