@@ -154,7 +154,7 @@ def PrintNodes(val):
     # Printing the final values
     
     for i in val:
-        print("Move : " + "\n" + str(i.act))
+        print("Move : " + "\n" + str(i.move)
         print("Result : " + "\n" + str(i.data)) 
         print("Node : "  + "\n" + str(i.node_no))
 
